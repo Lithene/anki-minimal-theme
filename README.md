@@ -16,7 +16,7 @@
 
 <p align="center"><img width="30px" src="https://media.giphy.com/media/cm06RQLho6r6w1U9MW/giphy.gif"><b>&nbsp;&nbsp;&nbsp;
 The [$]Equation[/$] Template</b></p>
-
+<p align="center"><img src="https://media.giphy.com/media/huyOOxKkSKsTH8W6oV/giphy.gif"></p>
 <p align="center">
   <img width="800px" src="https://i.imgur.com/VF5fan4.png">
   <img width="800px" src="https://i.imgur.com/Gi2b3d8.png">
