@@ -1,0 +1,131 @@
+/*Color Theme*/
+:root {
+    --card-bg: #ececec;
+    --front-term: rgba(0, 0, 0, 0.8);
+    --front-term-text: white;
+    --back-term: rgba(0, 0, 0, 0.8);
+    --back-term-text: white;
+    --button: rgba(0,0,0,0.3);
+    --button-text: white;
+    --button-hover: red;
+    --hint: white;
+    --hint-text: black;
+    }
+    
+    .card {
+     font-family: avenir;
+     font-size: 20px;
+     background: var(--card-bg);
+     text-align: center;
+     margin: 50px;
+    }
+    
+    /* Front of Card */
+    
+    .other-info .reading {
+     visibility: hidden;
+     color: white;
+     font-size: 0.7em;
+     background: rgba(0,0,0,0.3);
+     border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+     margin-bottom: -5px;
+     padding: 10px;
+    }
+    
+    .other-info .show {
+      visibility: visible;
+      animation: fadeIn 0.8s;
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    
+    .term {
+     font-size: 1.2em;
+     font-weight: bold;
+     border-radius: 8px;
+     padding: 10px;
+     color: var(--front-term-text);
+     background-color: var(--front-term);
+    }
+    
+    .term-back {
+     font-size: 1.2em;
+     font-weight: bold;
+     border-top-right-radius: 8px;
+     border-top-left-radius: 8px;
+     padding: 10px;
+     color: var(--back-term-text);
+     background-color: var(--back-term);
+    }
+    
+    .answer-front {
+     display: none;
+    }
+    
+    /* Hint Prompter*/
+    
+    .hint-btn{
+     visibility: hidden;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+    }
+    
+    .hint-btn .show {
+      visibility: visible;
+      animation: fadeIn 1s;
+    }
+    
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    
+    .prompt {
+     cursor: pointer;
+     background: var(--button);
+     color: var(--button-text);
+     font-weight: bolder;
+     margin: 10px;
+     padding: 5px 10px;
+     border-radius: 100%;
+    }
+    
+    .prompt:hover{
+     background: var(--button-hover);
+     transition: 5s;
+    }
+    
+    .no-hint{
+     cursor: auto;
+     color: white;
+    }
+    
+    .actual-hint{
+      background: var(--hint);
+      color: var(--hint-text);
+      border-radius: 5px;
+    }
+    
+    /* Back of Card */
+    
+    .answer {
+     text-align: left;
+     padding: 20px;
+     border: 3px solid var(--back-term);
+     border-top: 0;
+     border-bottom-right-radius: 8px;
+     border-bottom-left-radius: 8px;
+    }
+    
+    /* Mobile */
+    @media only screen and (max-device-width: 1024px) {
+      .card{
+        margin: 0px;
+        background: white;
+      }
+    }

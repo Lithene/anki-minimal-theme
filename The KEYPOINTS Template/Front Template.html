@@ -1,0 +1,34 @@
+<div class= "other-info" onmouseover="popUp(); popDown()" onmouseout="popUp(); popDown()">
+    <div class= "reading" id="subdeck">{{Subdeck}}<br>{{Tags}}</div>
+    <div class = "term">{{Front}}</div>
+</div>
+    
+<div class="hint-btn" onmouseover="popDown()" onmouseout="popDown()">
+<div id="hint-text"><div class ="prompt" onclick="insert()">＋</div></div></div>
+<div id="no-hint"></div>
+<div class="actual-hint" id="actual-hint"></div>
+    
+<div class="answer-front" id="ans-front">{{Back}}</div>
+    
+<script>
+function popUp(){
+    let popup = document.getElementById("subdeck");
+    popup.classList.toggle("show");
+}
+
+function popDown(){
+    let popdown = document.getElementById('hint-text');
+    popdown.classList.toggle("show");
+}
+
+function insert(){
+    var searchWithin = document.getElementById("ans-front").innerHTML;
+    const word = /[A-Z ]{3,}(:)[A-Z ]{3,}|[A-Z ]{4,}[(][A-Z]{4,}[)][A-Z ]{4,}|[-'"‘A-Z’"' ]{5,}/g;
+    const wordFound = new Set(searchWithin.match(word));
+    const keyword = wordFound.values();
+
+    if (keyword === null){
+    document.getElementById("no-hint").innerHTML = 'There are no hints 👍'; };
+    document.getElementById("actual-hint").innerHTML = [...wordFound].join("<br>");
+}
+</script>
