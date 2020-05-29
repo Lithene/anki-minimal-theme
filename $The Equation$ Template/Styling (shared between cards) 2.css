@@ -1,0 +1,192 @@
+.card {
+    font-family: avenir;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    margin: 50px;
+   }
+   
+   .other-info .reading {
+    visibility: hidden;
+    margin-bottom: -3px;
+    color: white;
+    font-size: 0.7em;
+    background: rgba(0,0,0,0.3);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 5px;
+    z-index: -1;
+   }
+   
+   .other-info .show {
+     visibility: visible;
+   }
+   
+   .term-front {
+    font-size: 1.5em;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+   }
+   
+   .term{
+    position: relative;
+    background: white;
+    border-radius: 8px;
+    padding: 20px 10px;
+   }
+   
+   .term-flip {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 10px;
+    color: black;
+    background-color: white;
+   }
+   
+   hr {
+    /*visibility: hidden*/
+    display: none;
+   }
+   
+   .answer {
+    text-align: center;
+    padding: 20px;
+    border: 3px solid white;
+    border-top: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: white;
+    color: black;
+   }
+   
+   .answer-flip {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid none;
+    border-top: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0px -2px 5px grey;
+   }
+   
+   /* Hint Prompter*/
+   
+   .hint-btn{
+    visibility: hidden;
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-content: center;
+    color: black;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: -20px;
+    padding-top: 20px;
+   }
+   
+   .hint-btn .show {
+     visibility: visible;
+     animation: fadeIn 1s;
+   }
+   
+   @keyframes fadeIn {
+     from {opacity: 0;}
+     to {opacity: 1;}
+   }
+   
+   .prompt {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+    font-weight: bold;
+    color: white;
+    padding: 0px 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+   }
+   
+   .prompt:hover{
+    background: red;
+    transition: 5s;
+   }
+   
+   .no-hint{
+    cursor: auto;
+   }
+   
+   .actual-hint{
+    visibility: hidden;
+   }
+   
+   .actual-hint .show{
+    visibility: visible;
+    color: black;
+    background: white;
+    padding: 10px 5px;
+    border-radius: 8px;
+   }
+   
+   .info {
+    color: black;
+    background: white;
+    margin-top: -5px;
+    padding: 5px 10px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+   }
+   
+   /* Night Mode */
+   
+   .nightMode .term{
+    color: white;
+    background: black;
+   }
+   
+   .nightMode .term-front{
+    color: black;
+    background: white;
+   }
+   
+   .nightMode .term-flip {
+    color: white;
+    background: black;
+   }
+   
+   .nightMode .info {
+    color: white;
+    background: black;
+   }
+   
+   .nightMode .answer{
+    color: white;
+    background: black;
+    border: 3px solid black;
+   }
+   
+   .nightMode .answer-flip {
+    color: black;
+    background: white;
+    border: 3px solid white;
+   }
+   
+   .nightMode .no-hint {
+    color: white;
+   }
+   
+   .nightMode .actual-hint .show{
+    color: white;
+    background: black;
+   }
+   
+   /* Mobile */
+   @media only screen and (max-device-width: 480px) {
+     .card{
+       margin: 0px;
+       background: white;
+     }
+   }
